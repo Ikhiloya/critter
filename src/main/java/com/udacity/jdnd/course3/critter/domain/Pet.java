@@ -1,7 +1,5 @@
 package com.udacity.jdnd.course3.critter.domain;
 
-import com.udacity.jdnd.course3.critter.user.domain.Customer;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;

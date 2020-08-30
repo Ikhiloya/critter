@@ -1,7 +1,5 @@
 package com.udacity.jdnd.course3.critter.domain;
 
-import com.udacity.jdnd.course3.critter.user.domain.EmployeeSkill;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;

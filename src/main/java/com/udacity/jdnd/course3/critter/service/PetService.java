@@ -1,11 +1,11 @@
 package com.udacity.jdnd.course3.critter.service;
 
 import com.google.common.collect.Lists;
-import com.udacity.jdnd.course3.critter.user.domain.Customer;
+import com.udacity.jdnd.course3.critter.domain.Customer;
 import com.udacity.jdnd.course3.critter.domain.Pet;
-import com.udacity.jdnd.course3.critter.user.exception.CustomerNotFoundException;
+import com.udacity.jdnd.course3.critter.exception.CustomerNotFoundException;
 import com.udacity.jdnd.course3.critter.exception.PetNotFoundException;
-import com.udacity.jdnd.course3.critter.user.repository.CustomerRepository;
+import com.udacity.jdnd.course3.critter.repository.CustomerRepository;
 import com.udacity.jdnd.course3.critter.repository.PetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

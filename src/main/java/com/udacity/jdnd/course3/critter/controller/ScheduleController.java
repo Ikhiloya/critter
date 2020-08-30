@@ -1,9 +1,9 @@
 package com.udacity.jdnd.course3.critter.controller;
 
 import com.udacity.jdnd.course3.critter.domain.Schedule;
-import com.udacity.jdnd.course3.critter.schedule.dto.ScheduleDTO;
-import com.udacity.jdnd.course3.critter.schedule.dto.mapper.ScheduleMapper;
-import com.udacity.jdnd.course3.critter.schedule.service.ScheduleService;
+import com.udacity.jdnd.course3.critter.dto.ScheduleDTO;
+import com.udacity.jdnd.course3.critter.dto.mapper.ScheduleMapper;
+import com.udacity.jdnd.course3.critter.service.ScheduleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
