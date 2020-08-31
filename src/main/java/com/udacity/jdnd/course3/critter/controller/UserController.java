@@ -32,7 +32,7 @@ public class UserController {
     private final CustomerService customerService;
     private final PetService petService;
     private final EmployeeService employeeService;
-    private  final UserMapper userMapper;
+    private final UserMapper userMapper;
 
     public UserController(CustomerService customerService, PetService petService, EmployeeService employeeService, UserMapper userMapper) {
         this.customerService = customerService;
@@ -89,9 +89,9 @@ public class UserController {
     @GetMapping("/employee/availability")
     public List<EmployeeDTO> findEmployeesForService(@RequestBody EmployeeRequestDTO employeeDTO) {
         logger.info("request to find employees for service");
-        List<String> skills = userMapper.mapEmployeeSkillsToString(employeeDTO.getSkills());
-        String dayOfWeek = employeeDTO.getDate().getDayOfWeek().name();
-        List<Employee> employeesForService = employeeService.findEmployeesForService(skills, dayOfWeek);
+//        List<String> skills = userMapper.mapEmployeeSkillsToString(employeeDTO.getSkills());
+//        String dayOfWeek = employeeDTO.getDate().getDayOfWeek().name();
+        List<Employee> employeesForService = employeeService.findEmployeesForService(employeeDTO.getSkills(), employeeDTO.getDate().getDayOfWeek());
         List<EmployeeDTO> employeeDTOS = new ArrayList<>();
         employeesForService.forEach(emp -> employeeDTOS.add(userMapper.mapEmployeeToEmployeeDTO(emp)));
         return employeeDTOS;

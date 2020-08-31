@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface EmployeeScheduleRepository extends JpaRepository<EmployeeSchedule, Long> {
     List<EmployeeSchedule> findAllByEmployeeId(long employeeId);
+
+    List<EmployeeSchedule> findAllByEmployeeIdIn(List<Long> employeeId);
 }
