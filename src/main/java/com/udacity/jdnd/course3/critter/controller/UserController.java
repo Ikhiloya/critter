@@ -89,8 +89,6 @@ public class UserController {
     @GetMapping("/employee/availability")
     public List<EmployeeDTO> findEmployeesForService(@RequestBody EmployeeRequestDTO employeeDTO) {
         logger.info("request to find employees for service");
-//        List<String> skills = userMapper.mapEmployeeSkillsToString(employeeDTO.getSkills());
-//        String dayOfWeek = employeeDTO.getDate().getDayOfWeek().name();
         List<Employee> employeesForService = employeeService.findEmployeesForService(employeeDTO.getSkills(), employeeDTO.getDate().getDayOfWeek());
         List<EmployeeDTO> employeeDTOS = new ArrayList<>();
         employeesForService.forEach(emp -> employeeDTOS.add(userMapper.mapEmployeeToEmployeeDTO(emp)));

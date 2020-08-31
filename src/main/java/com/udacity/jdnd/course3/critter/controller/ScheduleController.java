@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * Handles web requests related to Schedules.
  */
-//TODO: extract mappers to mapper classes
 @RestController
 @RequestMapping("/schedule")
 public class ScheduleController {

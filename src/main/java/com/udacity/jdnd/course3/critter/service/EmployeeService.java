@@ -115,9 +115,7 @@ public class EmployeeService {
 
     private Set<EmployeeSkill> mapEmpSkillSetToEmpSkill(Set<EmployeeSkillSet> employeeSkillSets) {
         Set<EmployeeSkill> employeeSkills = new HashSet<>();
-        employeeSkillSets.forEach(emp -> {
-            employeeSkills.add(emp.getEmployeeSkill());
-        });
+        employeeSkillSets.forEach(emp -> employeeSkills.add(emp.getEmployeeSkill()));
         return employeeSkills;
     }
 }

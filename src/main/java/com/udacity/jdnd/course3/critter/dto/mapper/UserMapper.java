@@ -40,8 +40,6 @@ public class UserMapper {
     }
 
     public EmployeeDTO mapEmployeeToEmployeeDTO(Employee employee) {
-        employee.getEmployeeSkillSet().forEach(emp -> System.out.println("Skill===>" + emp.getEmployeeSkill().name()));
-
         EmployeeDTO employeeDTO = new EmployeeDTO();
         Set<EmployeeSkill> employeeSkills = new HashSet<>();
         Set<DayOfWeek> daysOfWeek = new HashSet<>();
